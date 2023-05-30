@@ -19,7 +19,7 @@
     <script src="./scripts.js"></script>
 </head>
 
-<body onload="obterProdutos(); obterCategorias();">
+<body>
     <div class="container site">
         <div class="container">
             <div class="row mobile">
@@ -33,15 +33,17 @@
                     </div>
 
                     <div class="row">
-                        <div class="input-group search">
-                            <input type="search" id="inpup-main-search" class="form-control"
-                                placeholder="O que você procura?">
-                            <div>
-                                <button class="btn btn-secondary" onclick="pesquisarPorTexto()">
-                                    <img src="./assets/images/icons/lupa.png" class="search-icon" alt="Pesquisar">
-                                </button>
+                        <form>
+                            <div class="input-group search">
+                                <input type="search" id="inpup-main-search" class="form-control"
+                                    placeholder="O que você procura?">
+                                <div>
+                                    <button class="btn btn-secondary" type="submit">
+                                        <img src="./assets/images/icons/lupa.png" class="search-icon" alt="Pesquisar">
+                                    </button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
 
@@ -107,25 +109,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <div class="row nozamatext justify-content-center align-items-center">
+                    <!-- <div class="row nozamatext justify-content-center align-items-center">
                         <h3 class="titulo-secao">Está bombando: fique por dentro das últimas tendências!</h3>
-                    </div>
+                    </div> -->
                     <div class="row justify-content-center align-items-center" id="produtos-home"></div>
+                    <!-- aqui deve ter o conteudo -->
 
-                    <div class="row center justify-content-center align-items-center" id="area-paginacao">
-                        <nav aria-label="Paginação">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item" id="btn-anterior">
-                                    <a class="page-link" onclick="trocarPagina(1)" tabindex="-1">Anterior</a>
-                                </li>
-                                <li class="page-item active">
-                                    <a class="page-link" id="pagina-atual"></a>
-                                </li>
-                                <li class="page-item" id="btn-proximo">
-                                    <a class="page-link" onclick="trocarPagina(2)">Próximo</a>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="row center justify-content-center align-items-center">
+                        <button class="btn btn-secondary submit see-btn nozamatext">Ver mais </button>
                     </div>
                 </div>
 
@@ -185,7 +176,7 @@
                         <h3>Menu rápido</h3>
                     </div>
                     <div class="menu">
-                        <ul class="no-bullet">
+                        <ul>
                             <li><a href="#">Ajuda</a></li>
                             <li><a href="#">Política de envio</a></li>
                             <li><a href="#">Cancelamentos e devoluções</a></li>
