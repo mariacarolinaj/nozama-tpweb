@@ -19,7 +19,7 @@
     <script src="./scripts.js"></script>
 </head>
 
-<body>
+<body onload="obterProdutoById(); obterCategorias()">
     <div class="container site">
         <div class="container">
             <div class="row mobile">
@@ -33,17 +33,15 @@
                     </div>
 
                     <div class="row">
-                        <form>
-                            <div class="input-group search">
-                                <input type="search" id="inpup-main-search" class="form-control"
-                                    placeholder="O que você procura?">
-                                <div>
-                                    <button class="btn btn-secondary" type="submit">
-                                        <img src="./assets/images/icons/lupa.png" class="search-icon" alt="Pesquisar">
-                                    </button>
-                                </div>
+                        <div class="input-group search">
+                            <input type="search" id="inpup-main-search" class="form-control"
+                                placeholder="O que você procura?">
+                            <div>
+                                <button class="btn btn-secondary" onclick="pesquisarPorTexto()">
+                                    <img src="./assets/images/icons/lupa.png" class="search-icon" alt="Pesquisar">
+                                </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
 
@@ -109,14 +107,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                    <!-- <div class="row nozamatext justify-content-center align-items-center">
-                        <h3 class="titulo-secao">Está bombando: fique por dentro das últimas tendências!</h3>
-                    </div> -->
-                    <div class="row justify-content-center align-items-center" id="produtos-home"></div>
-                    <!-- aqui deve ter o conteudo -->
-
+                    <div class="row nozamatext justify-content-center align-items-center">
+                        <h3 class="titulo-secao" id="descricao-pagina"></h3>
+                    </div>
+                    <div id="produto"></div>
                     <div class="row center justify-content-center align-items-center">
-                        <button class="btn btn-secondary submit see-btn nozamatext">Ver mais </button>
+                        <button class="btn btn-secondary submit nozamatext">Adicionar ao carrinho</button>
                     </div>
                 </div>
 
@@ -143,7 +139,6 @@
                         </div>
                         <div class="row center justify-content-center align-items-center">
                             <button class="btn btn-secondary submit nozamatext">Inscrever</button>
-
                         </div>
                     </row>
 
@@ -176,7 +171,7 @@
                         <h3>Menu rápido</h3>
                     </div>
                     <div class="menu">
-                        <ul>
+                        <ul class="no-bullet">
                             <li><a href="#">Ajuda</a></li>
                             <li><a href="#">Política de envio</a></li>
                             <li><a href="#">Cancelamentos e devoluções</a></li>

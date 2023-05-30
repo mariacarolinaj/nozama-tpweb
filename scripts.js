@@ -112,3 +112,39 @@ function pesquisarPorTexto() {
   var url = "pesquisa.html?termo=" + encodeURIComponent(termo);
   window.location.href = url;
 }
+
+/* Obtém informações sobre o produto na página de detalhes */
+function obterProdutoById() {
+  var urlAtual = new URL(window.location.href);
+  var id = urlAtual.searchParams.get('id');
+  fetch(`http://diwserver.vps.webdock.cloud:8765/products/${id}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('descricao-pagina').innerHTML = data.title;
+      let str = `<div> 
+                  <div style="display: grid; place-items: center;">
+                  <div> ${data.rating.rate} ★ (${data.rating.count}) </div>
+                    <div>
+                      <img style="width: 100%;
+                      object-fit: contain;
+                      border: 4px solid #333c4c;
+                      border-radius: 16px;
+                      background-position: center;" src="${data.image}">
+                    </div>
+                    <h2> R$ ${data.price} </h2>
+                  </div>
+                  ${data.description} <br>
+                  <div><b>Brand:</b> ${data.brandName}</div>
+                  <div><b>Season:</b> ${data.season}</div>
+                  <div><b>Usage:</b> ${data.usage}</div>
+                  <div><b>Gender:</b> ${data.gender}</div>
+                  <div><b>Base Colour:</b> ${data.baseColour}</div>
+                  <div><b>Year:</b> ${data.year}</div>
+                  <div><b>Article Type:</b> ${data.articleType}</div>
+                  <div><b>Display Categories:</b> ${data.displayCategories}</div>
+                  <div><b>Category:</b> ${data.category}</div>
+              </div>`;
+
+      document.getElementById('produto').innerHTML = str;
+    });
+}
