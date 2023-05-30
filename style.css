@@ -24,6 +24,15 @@ body {
     margin-top: 10%;
 }
 
+.banner a {
+    color: #333c4c;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none !important;
+}
+
 .banner img {
     width: 100px;
 }
@@ -66,7 +75,7 @@ body {
     width: 100%;
     height: 300px;
 
-    object-fit: contain;
+    object-fit: cover;
     border: 4px solid #333c4c;
     border-radius: 16px;
     background-position: center;
@@ -75,7 +84,14 @@ body {
 .card-title,
 .card-text {
     text-align: center;
-    font-size: large;
+}
+
+.card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-body {
@@ -244,4 +260,13 @@ body {
 
 .margin-text {
     margin-bottom: 16px;
+}
+
+#categorias li {
+    text-align: justify;
+    font-size: 14px;
+    size: 14px;
+    font-size: large;
+    text-transform: capitalize;
+    padding-bottom: 16px;
 }

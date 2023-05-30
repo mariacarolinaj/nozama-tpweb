@@ -19,12 +19,12 @@
     <script src="./scripts.js"></script>
 </head>
 
-<body>
+<body onload="obterProdutos(); obterCategorias(); construirPaginacao()">
     <div class="container site">
         <div class="container">
             <div class="row mobile">
                 <div class="col-md-3 nozamatext">
-                    <p class="banner">nozama<br><img src="./assets/images/nozama.png"></p>
+                    <p class="banner"><a href="index.html">nozama</a><br><img src="./assets/images/nozama.png"></p>
                 </div>
 
                 <div class="col-md-4 section">
@@ -33,17 +33,17 @@
                     </div>
 
                     <div class="row">
-                        <form>
+                        <!-- <form onsubmit="pesquisarPorTexto()"> -->
                             <div class="input-group search">
                                 <input type="search" id="inpup-main-search" class="form-control"
                                     placeholder="O que você procura?">
                                 <div>
-                                    <button class="btn btn-secondary" type="submit">
+                                    <button class="btn btn-secondary" onclick="pesquisarPorTexto()">
                                         <img src="./assets/images/icons/lupa.png" class="search-icon" alt="Pesquisar">
                                     </button>
                                 </div>
                             </div>
-                        </form>
+                        <!-- </form> -->
                     </div>
                 </div>
 
@@ -115,7 +115,20 @@
                     <div class="row justify-content-center align-items-center" id="produtos-home"></div>
 
                     <div class="row center justify-content-center align-items-center">
-                        <button class="btn btn-secondary submit see-btn nozamatext">Ver mais </button>
+                        <!-- <button class="btn btn-secondary submit see-btn nozamatext">Ver mais </button> -->
+                        <nav aria-label="Paginação">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item" id="btn-anterior">
+                                    <a class="page-link" onclick="paginaAnterior()" tabindex="-1">Anterior</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a class="page-link" id="pagina-atual"></a>
+                                </li>
+                                <li class="page-item" id="btn-proximo">
+                                    <a class="page-link" onclick="proximaPagina()">Próximo</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
 
@@ -123,6 +136,9 @@
                     <row>
                         <div class="nozamatext">
                             <h3 class="titulo-subsecao">Categorias</h3>
+                            <ul>
+                                <div id="categorias"></div>
+                            </ul>
                         </div>
                     </row>
 
