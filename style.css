@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'OfficinaSansStd-Bold';
+    src: url('./assets/fonts/OfficinaSansStd-Bold.otf') format('truetype');
+}
+
+body {
+    background-image: url("./assets/background/bg.jpg");
+    background-repeat: repeat;
+}
+
+.site {
+    background-color: white;
+    padding: 0px !important;
+}
+
+.poketext {
+    font-family: 'OfficinaSansStd-Bold', sans-serif;
+    text-align: center;
+}
+
+.banner {
+    font-size: 60px;
+    line-height: 40px;
+    margin-top: 10%;
+}
+
+.banner img {
+    width: 100px;
+}
+
+.navbar {
+    margin-bottom: 8px !important;
+}
+
+.nav-link {
+    color: #e47911 !important;
+    font-family: 'OfficinaSansStd-Bold', sans-serif;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.icon {
+    width: 42px;
+    margin-right: 16px;
+}
+
+.icon-small {
+    width: 16px;
+    margin: 0 6px 0 8px;
+}
+
+.search {
+    display: flex !important;
+}
+
+.search-icon {
+    width: 19px;
+}
+
+#inpup-main-search {
+    width: 75%;
+    margin-right: 16px;
+}
+
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .glyphicon-chevron-left {
+    color: black;
+}
+
+.carousel-control {
+    background-image: none !important;
+    background-color: transparent !important;
+}
+
+.box {
+    border: 12px dotted greenyellow;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.wrapping {
+    padding: 14px;
+}
+
+.icon-set {
+    background-image: url('./assets/images/icons/pokeball.png');
+    height: 32px;
+    background-size: contain;
+    background-repeat: space;
+    margin: 8px 0;
+}
+
+.card img {
+    width: 100%;
+    max-height: 100%;
+    border: 4px solid #333c4c;
+    border-radius: 16%;
+    background-position: center;
+}
+
+.card-title,
+.card-text {
+    text-align: center;
+    font-size: large;
+}
+
+.card {
+    margin: 10px 16px;
+    cursor: pointer;
+}
+
+.small {
+    background-size: 200%;
+    border: 6px solid transparent !important;
+    width: 200% !important;
+}
+
+@media (min-width: 801px) {
+    .mobile-view {
+        display: none;
+    }
+    
+    .see-btn {
+        max-width: 20%;
+    
+    }
+}
+
+@media (max-width: 800px) {
+    .small {
+        width: 100% !important;
+    }
+
+    .mobile {
+        margin-left: 8px !important;
+    }
+
+    .site {
+        display: table !important;
+        margin: 0 16px !important;
+    }
+
+    .desktop-view {
+        display: none !important;
+    }
+
+    .navbar-inverse .navbar-toggle {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-right: 15px;
+    }
+
+    .navbar-inverse {
+        background-color: transparent !important;
+        border-color: transparent !important;
+    }
+
+    .navbar-toggle {
+        background-color: #e47911 !important;
+        border-color: transparent !important;
+        border-radius: 30% !important;
+        height: 42px !important;
+    }
+
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.635);
+        border-color: transparent !important;
+    }
+
+    .navbar-collapse ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .navbar-collapse li {
+        border-bottom: 1px solid #555;
+    }
+
+    .navbar-collapse li a {
+        color: #fff;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .nav li a {
+        color: white !important;
+    }
+
+    .box {
+        border: 4px dotted greenyellow;
+    }
+}
+
+.card:hover {
+    color: #e47911;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+}
+
+.titulo-secao {
+    background: #e47911;
+    color: white;
+    padding: 8px;
+    margin-top: 0 !important;
+}
+
+.titulo-subsecao {
+    color: #333c4c;
+    margin-bottom: 28px;
+    margin-top: 8px;
+    text-decoration: underline overline #e47911;
+    text-decoration: none;
+    border-bottom: 3px solid #e47911;
+    padding-bottom: 6px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+.search-section {
+    padding-right: 16px;
+}
+
+.search-section label {
+    margin-top: 8px;
+}
+
+.section {
+    padding: 24px;
+}
+
+.sub-card {
+    text-align: justify;
+    font-size: medium;
+    margin-left: 24px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.text {
+    margin-top: -16px;
+}
+
+.side {
+    background-color: #e9ebe97a !important;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.submit {
+    background-color: darkgrey;
+    color: white;
+    width: 60%;
+    border-radius: 18px !important;
+    text-transform: uppercase;
+    margin-bottom: 24px !important;
+    margin-top: 16px;
+}
+
+.footer {
+    background-color: #e9ebe97a !important;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    background-color: #f2f2f2;
+    padding: 5px;
+}
+
+.no-bullet {
+    list-style-type: none;
+}
+
+.menu a {
+    color: #e47911;
+}
+
+.copyright {
+    text-align: center;
+    padding: 24px;
+}
+
+.margin-text {
+    margin-bottom: 16px;
+}

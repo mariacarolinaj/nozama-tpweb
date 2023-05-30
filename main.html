@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Feito pela aluna Maria Carolina Resende Jaudacy 
+     Matrícula 667477
+     Disciplina de Interfaces Web
+     Segundo Trabalho Prático -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nozama</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./scripts.js"></script>
+</head>
+
+<body>
+    <div class="container site">
+        <div class="container">
+            <div class="row mobile">
+                <div class="col-md-3 poketext">
+                    <p class="banner">nozama<br><img src="./assets/images/nozama.png"></p>
+                </div>
+
+                <div class="col-md-4 section">
+                    <div class="row">
+                        <h4>Seja bem-vindo!</h4>
+                    </div>
+
+                    <div class="row">
+                        <form>
+                            <div class="input-group search">
+                                <input type="search" id="inpup-main-search" class="form-control"
+                                    placeholder="O que você procura?">
+                                <div>
+                                    <button class="btn btn-secondary" type="submit">
+                                        <img src="./assets/images/icons/lupa.png" class="search-icon" alt="Pesquisar">
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="row desktop-view">
+                        <nav class="navbar navbar-expand-md navbar-light bg-light">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav justify-content-between w-100">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Cadastrar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Minha conta</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Meus pedidos</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <nav class="navbar navbar-inverse navbar-fixed-bottom mobile-view">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#"></a>
+                            </div>
+                            <div class="collapse navbar-collapse" id="nav">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="#">Login</a></li>
+                                    <li><a href="#">Cadastrar</a></li>
+                                    <li><a href="#">Minha conta</a></li>
+                                    <li><a href="#">Meus pedidos</a></li>
+                                    <li><a href="#">Sacola</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="row margin-text">
+                        <div class="col-md-10">
+                            <div class="row">Envios feitos de segunda a sexta</div>
+                            <div class="row">Atendimento ao consumidor das 8h as 18h</div>
+                        </div>
+                        <div class="col-md-2 desktop-view">
+                            <a href="#">
+                                <img src="./assets/images/icons/sacola.png" class="icon" alt="Sacola de itens">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container desktop-view">
+            <div class="row d-flex justify-content-center">
+                <div class="icon-set"></div>
+            </div>
+        </div> -->
+
+        <div class="container">
+            <!-- <div class="row wrapping"> -->
+                <!-- <div class="col-md-3 search-section">
+                    <div class="poketext">
+                        <h2>Explore nossa Pokedex</h2>
+                    </div>
+                    <form>
+                        <div class="form-group">
+                            <label for="selectElemento">Elemento</label>
+                            <select class="form-control" id="selectElemento">
+                                <option>Normal</option>
+                                <option>Fogo</option>
+                                <option>Água</option>
+                                <option>Grama</option>
+                                <option>Elétrico</option>
+                                <option>Gelo</option>
+                                <option>Lutador</option>
+                                <option>Venenoso</option>
+                                <option>Terra</option>
+                                <option>Voador</option>
+                                <option>Psíquico</option>
+                                <option>Inseto</option>
+                                <option>Pedra</option>
+                                <option>Fantasma</option>
+                                <option>Dragão</option>
+                                <option>Sombrio</option>
+                                <option>Aço</option>
+                                <option>Fada</option>
+                            </select>
+
+                            <label for="selectGeracao">Geração</label>
+                            <select class="form-control" id="selectGeracao">
+                                <option>1ª Geração: Pokémon Red, Blue e Yellow</option>
+                                <option>2ª Geração: Pokémon Gold, Silver e Crystal</option>
+                                <option>3ª Geração: Pokémon Ruby, Sapphire e Emerald</option>
+                                <option>4ª Geração: Pokémon Diamond, Pearl e Platinum</option>
+                                <option>5ª Geração: Pokémon Black, White, Black 2 e White </option>
+                                <option>6ª Geração: Pokémon X, Y, Omega Ruby e Alpha Sapphire</option>
+                                <option>7ª Geração: Pokémon Sun, Moon, Ultra Sun e Ultra Moon</option>
+                                <option>8ª Geração: Pokémon Sword e Shield</option>
+                            </select>
+
+                            <label for="selectCategoria">Categoria de item</label>
+                            <select class="form-control" id="selectCategoria">
+                                <option>Pelúcias</option>
+                                <option>Pokébolas</option>
+                                <option>Action figures</option>
+                                <option>Camisas</option>
+                                <option>Mochilas</option>
+                            </select>
+
+                            <label for="input1">R$ A partir de</label>
+                            <input type="number" step="any" class="form-control" id="input1">
+                            <label for="input2">R$ Até</label>
+                            <input type="number" step="any" class="form-control" id="input2">
+
+                        </div>
+                        <div class="row center justify-content-center align-items-center">
+                            <button type="submit" class="btn btn-secondary submit">Buscar</button>
+                        </div>
+
+                    </form>
+                </div> -->
+
+                <!-- <div class="col-md-9 box">
+                    <div id="carousel" class="carousel slide" data-ride="carousel">
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="./assets/images/carousel/1.webp" alt="Pelúcias Pokemon">
+                            </div>
+
+                            <div class="item">
+                                <img src="./assets/images/carousel/2-resized.png" alt="Pelúcias Pokemon">
+                            </div>
+
+                            <div class="item">
+                                <img src="./assets/images/carousel/3-resized.png" alt="Pelúcias Pokemon">
+                            </div>
+                        </div>
+
+                        <a class="left carousel-control" href="#carousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Próximo</span>
+                        </a>
+                    </div>
+                </div> -->
+
+            <!-- </div> -->
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row poketext justify-content-center align-items-center">
+                        <h3 class="titulo-secao">Está bombando: fique por dentro das últimas tendências!</h3>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/a.webp" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Turtwig">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Turtwig</b></h5>
+                                    <p class="card-text">R$ 25,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/bulbassaur.webp" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Bulbasaur">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Peúcia Bulbasaur</b></h5>
+                                    <p class="card-text">R$ 53,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/Pikachu.png" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Pikachu">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Pikachu</b></h5>
+                                    <p class="card-text">R$ 55,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/charmander.jpg" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Charmander">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Charmander</b></h5>
+                                    <p class="card-text">R$ 55,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/eevee.jpg" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Eeve">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Eevee</b></h5>
+                                    <p class="card-text">R$ 39,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/ekans.webp" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Ekans">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Ekans</b></h5>
+                                    <p class="card-text">R$ 34,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/gengar.jpg" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Gengar">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Gengar</b></h5>
+                                    <p class="card-text">R$ 34,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/glaceon.webp" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Glaceon">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Glaceon</b></h5>
+                                    <p class="card-text">R$ 45,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="./assets/images/produtos/meowth.webp" class="card-img-top"
+                                    alt="Imagem de uma pelúcia do Meowth">
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Pelúcia Meowth</b></h5>
+                                    <p class="card-text">R$ 55,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row center justify-content-center align-items-center">
+                        <button class="btn btn-secondary submit see-btn poketext">Ver mais </button>
+                    </div>
+                </div>
+
+                <div class="col-md-3 side">
+                    <row>
+                        <div class="poketext">
+                            <h3 class="titulo-subsecao">Categorias</h3>
+                        </div>
+                        <!-- <div>
+                            <div class="card ">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img src="./assets/images/produtos/mew.webp" class="card-img small"
+                                            alt="Imagem de uma pelúcia do Mew">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title sub-card"><b>Pelúcia Mew</b></h5>
+                                            <p class="card-text sub-card">R$ 68,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="card ">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img src="./assets/images/produtos/ninetales.webp" class="card-img small"
+                                            alt="Imagem de uma pelúcia do Ninetales">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title sub-card"><b>Pelúcia Ninetales</b></h5>
+                                            <p class="card-text sub-card">R$ 65,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="card ">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img src="./assets/images/produtos/piplup.webp" class="card-img small"
+                                            alt="Imagem de uma pelúcia do Piplup">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title sub-card"><b>Pelúcia Piplup</b></h5>
+                                            <p class="card-text sub-card">R$ 34,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="card ">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img src="./assets/images/produtos/snorlax.webp" class="card-img small"
+                                            alt="Imagem de uma pelúcia do Snorlax">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title sub-card"><b>Pelúcia Snorlax</b></h5>
+                                            <p class="card-text sub-card">R$ 55,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="card ">
+                                <div class="row no-gutters">
+                                    <div class="col-md-3">
+                                        <img src="./assets/images/produtos/squirtle.jpg" class="card-img small"
+                                            alt="Imagem de uma pelúcia do Squirtle">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
+                                            <h5 class="card-title sub-card"><b>Pelúcia Squirtle</b></h5>
+                                            <p class="card-text sub-card">R$ 70,00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row center justify-content-center align-items-center">
+                                <button class="btn btn-secondary submit">Ver mais</button>
+                            </div>
+                        </div> -->
+                    </row>
+
+                    <row>
+                        <div class="poketext">
+                            <h3 class="titulo-subsecao">Newsletter</h3>
+                            <h4 class="text">Saiba primeiro todas as novidades da nozama!</h4>
+                        </div>
+                        <div class="form-group">
+                            <div>
+                                <label for="input1">Informe seu e-mail abaixo</label>
+                                <input type="email" class="form-control" id="input1">
+                            </div>
+                        </div>
+                        <div class="row center justify-content-center align-items-center">
+                            <button class="btn btn-secondary submit poketext">Inscrever</button>
+
+                        </div>
+                    </row>
+
+                    <row>
+                        <div>
+                            <img src="./assets/images/nozama.png" width="100%"
+                                alt="Logomarca da nozama">
+                        </div>
+                    </row>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="container site">
+        <div class=" footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="poketext">
+                        <h3>Pagamento</h3>
+                    </div>
+                    <div>
+                        <img src="./assets/images/icons/cartoes.png" width="100%" alt="Cartões">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="poketext">
+                        <h3>Menu rápido</h3>
+                    </div>
+                    <div class="menu">
+                        <ul class="no-bullet">
+                            <li><a href="#">Ajuda</a></li>
+                            <li><a href="#">Política de envio</a></li>
+                            <li><a href="#">Cancelamentos e devoluções</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Avisos legais</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="poketext">
+                        <h3>Redes sociais</h3>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img src="./assets/images/icons/redes.png" width="100%" alt="Redes sociais">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="poketext">
+                        <h3>Contato</h3>
+                    </div>
+                    <div>
+                        <ul class="no-bullet">
+                            <li>Disciplina de Interfaces Web</li>
+                            <li>Puc Minas Virtual</li>
+                            <li>Belo Horizonte - MG - Brasil</li>
+                            <br>
+                            <li>
+                                <img src="./assets/images/icons/email.png" width="10%" alt="E-mail">
+                                contato@nozama.com
+                            </li>
+                            <li>
+                                <img src="./assets/images/icons/telefone.png" width="10%" alt="Telefone">
+                                0800-111-111
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <p class=" copyright"><b>2023 - Maria Carolina Resende Jaudacy, matrícula 667477 - Curso de Ciência da Computação - Todos os direitos reservados.</b></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
