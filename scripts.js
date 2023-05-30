@@ -18,7 +18,7 @@ function obterCategoriaPesquisa() {
 
 /* Obtém os dados de produtos da API */
 function obterProdutos() {
-  let url = `http://diwserver.vps.webdock.cloud:8765/products`;
+  let url = `https://diwserver.vps.webdock.cloud/products`;
 
   var categoria = obterCategoriaPesquisa();
   var termo = obterTextoPesquisa();
@@ -59,7 +59,7 @@ function obterProdutos() {
 
 /* Obtém as categorias via API */
 function obterCategorias() {
-  fetch('http://diwserver.vps.webdock.cloud:8765/products/categories')
+  fetch('https://diwserver.vps.webdock.cloud/products/categories')
     .then(res => res.json())
     .then(data => {
       let str = ''
@@ -117,7 +117,7 @@ function pesquisarPorTexto() {
 function obterProdutoById() {
   var urlAtual = new URL(window.location.href);
   var id = urlAtual.searchParams.get('id');
-  fetch(`http://diwserver.vps.webdock.cloud:8765/products/${id}`)
+  fetch(`https://diwserver.vps.webdock.cloud/products/${id}`)
     .then(res => res.json())
     .then(data => {
       document.getElementById('descricao-pagina').innerHTML = data.title;
