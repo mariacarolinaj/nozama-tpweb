@@ -13,7 +13,7 @@ body {
     padding: 0px !important;
 }
 
-.poketext {
+.nozamatext {
     font-family: 'OfficinaSansStd-Bold', sans-serif;
     text-align: center;
 }
@@ -62,34 +62,6 @@ body {
     margin-right: 16px;
 }
 
-.carousel-control .glyphicon-chevron-right,
-.carousel-control .glyphicon-chevron-left {
-    color: black;
-}
-
-.carousel-control {
-    background-image: none !important;
-    background-color: transparent !important;
-}
-
-.box {
-    border: 12px dotted greenyellow;
-    background-color: white;
-    border-radius: 16px;
-}
-
-.wrapping {
-    padding: 14px;
-}
-
-.icon-set {
-    background-image: url('./assets/images/icons/pokeball.png');
-    height: 32px;
-    background-size: contain;
-    background-repeat: space;
-    margin: 8px 0;
-}
-
 .card img {
     width: 100%;
     max-height: 100%;
@@ -109,17 +81,11 @@ body {
     cursor: pointer;
 }
 
-.small {
-    background-size: 200%;
-    border: 6px solid transparent !important;
-    width: 200% !important;
-}
-
 @media (min-width: 801px) {
     .mobile-view {
         display: none;
     }
-    
+
     .see-btn {
         max-width: 20%;
     
@@ -127,10 +93,6 @@ body {
 }
 
 @media (max-width: 800px) {
-    .small {
-        width: 100% !important;
-    }
-
     .mobile {
         margin-left: 8px !important;
     }
@@ -187,10 +149,6 @@ body {
     .nav li a {
         color: white !important;
     }
-
-    .box {
-        border: 4px dotted greenyellow;
-    }
 }
 
 .card:hover {
@@ -222,8 +180,6 @@ body {
     text-align: center;
 }
 
-
-
 .search-section {
     padding-right: 16px;
 }
@@ -234,18 +190,6 @@ body {
 
 .section {
     padding: 24px;
-}
-
-.sub-card {
-    text-align: justify;
-    font-size: medium;
-    margin-left: 24px;
-}
-
-.divider {
-    height: 1px;
-    background-color: #ccc;
-    margin: 20px 0;
 }
 
 .text {
